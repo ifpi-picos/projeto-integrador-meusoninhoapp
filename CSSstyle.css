@@ -1,0 +1,213 @@
+:root {
+  --cor-primaria: #adbbff;
+  --cor-secundaria: white;
+  --cor-de-contraste: #536CF3;
+}
+
+@font-face {
+  font-family: Nexa-Heavy;
+  src: local(Nexa-Heavy), url(assets/nexa/Nexa-Heavy.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+  max-width: 100%;
+  font-family: Nexa-Heavy;
+}
+
+.BodyLogin {
+  background-color: var(--cor-primaria);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContainerLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 65vh;
+  width: 115vh;
+  background-color: var(--cor-secundaria);
+  border-radius: 50px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.InsideLogin {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.TitleLogin {
+  font-size: 50px;
+}
+
+.InfoBlock {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.FormLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FormLogin form {
+  display: flex;
+  flex-direction: column;
+}
+
+.FormLogin form input {
+  transition: all 0.2s ease-in-out;
+  width: 35vh;
+}
+
+.FormLogin form input:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.InputLogin, .InputCadastro {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #CFCFCF;
+  border: none;
+}
+
+.ButtonLogin, .ButtonCadastro {
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: var(--cor-de-contraste);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.ButtonLogin:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.ToggleButton {
+  background-color: transparent;
+  color: var(--cor-de-contraste);
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-bottom: 5%;
+}
+
+.ContainerErroLogin {
+  background-color: rgba(255, 0, 0, 0.75);
+  width: 100%;
+  height: 5vh;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.ContainerCadastroLogin{
+  background-color: rgba(0, 128, 0, 0.75);
+  width: 100%;
+  height: 5vh;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.fadeInLeft {
+  animation: fadeInLeft 0.5s forwards;
+}
+
+.fadeOutLeft {
+  animation: fadeOutLeft 0.5s forwards;
+}
+
+.fadeInRight {
+  animation: fadeInRight 0.5s forwards;
+}
+
+.fadeOutRight {
+  animation: fadeOutRight 0.5s forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+.DireitaLogin {
+  background-color: var(--cor-de-contraste);
+  height: 100%;
+  width: 50%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContentDireitaLogin {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  cursor: alias;
+}
+
+.DireitaLogin img {
+  width: 45%;
+  height: 40%;
+}
