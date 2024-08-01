@@ -5,8 +5,8 @@
   "background_color": "#5653f3",
   "display": "standalone",
   "orientation": "",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "/projeto-integrador-meusoninhoapp",
+  "start_url": "/projeto-integrador-meusoninhoapp/index.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
