@@ -1,0 +1,415 @@
+:root {
+  --cor-primaria-clara: #c8c7ff;
+  --cor-secundaria: white;
+  --cor-primaria: /* #485cbc*/ #5653f3;
+  
+}
+
+@font-face {
+  font-family: Nexa-Heavy;
+  src: local(Nexa-Heavy), url(../Assets/nexa/Nexa-Heavy.ttf);
+}
+
+@font-face{
+  font-family: Nexa;
+  src: local(Nexa-Light), url(../Assets/nexa/Nexa.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+  max-width: 100%;
+  font-family: Nexa-Heavy;
+  box-sizing: border-box;
+}
+
+.BodyLogin {
+  background-color: var(--cor-primaria-clara);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContainerLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 65vh;
+  width: 115vh;
+  background-color: var(--cor-secundaria);
+  border-radius: 50px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.InsideLogin {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.TitleLogin {
+  font-size: 50px;
+}
+
+.InfoBlock {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.FormLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.FormLogin form {
+  display: flex;
+  flex-direction: column;
+}
+
+.FormLogin form input {
+  transition: all 0.2s ease-in-out;
+  width: 35vh;
+}
+
+.FormLogin form input:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.InputLogin, .InputCadastro {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #CFCFCF;
+  border: none;
+}
+
+.ButtonLogin, .ButtonCadastro {
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: var(--cor-primaria);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.ButtonLogin:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+
+.ToggleButton {
+  background-color: transparent;
+  color: var(--cor-primaria);
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-bottom: 5%;
+}
+
+.ContainerErroLogin {
+  background-color: rgba(255, 0, 0, 0.75);
+  width: 100%;
+  height: 5vh;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.ContainerCadastroLogin{
+  background-color: rgba(0, 128, 0, 0.75);
+  width: 100%;
+  height: 5vh;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.fadeInLeft {
+  animation: fadeInLeft 0.5s forwards;
+}
+
+.fadeOutLeft {
+  animation: fadeOutLeft 0.5s forwards;
+}
+
+.fadeInRight {
+  animation: fadeInRight 0.5s forwards;
+}
+
+.fadeOutRight {
+  animation: fadeOutRight 0.5s forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+.DireitaLogin {
+  background-color: var(--cor-primaria);
+  height: 100%;
+  width: 50%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContentDireitaLogin {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+  cursor: alias;
+}
+
+.DireitaLogin img {
+  width: 45%;
+  height: 40%;
+}
+
+
+
+/* CSS da Home */
+
+.body-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 100vh;
+  background-color: var(--cor-primaria-clara);
+}
+
+header {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background-color: var(--cor-primaria);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+}
+
+.page{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8vh;
+}
+
+nav{
+  width: 20%;
+  max-width: 200px;
+  background-color: var(--cor-primaria);
+  height: calc(100vh - 8vh);
+}
+
+main{
+  width: 100%;
+  border: 1px solid #000;
+}
+
+.HeaderHome img {
+  width: 7vh;
+  height: 7vh;
+}
+
+.MeioHeaderHome {
+  display: flex;
+  align-items: center;
+}
+
+.MeioHeaderHome h1 {
+  margin-left: 1rem;
+  font-size: 2rem;
+  color: var(--cor-primaria);
+}
+
+.UserIconHome {
+  width: 7vh;
+  height: 7vh;
+}
+
+.MainHome {
+  width: 100%;
+  height: calc(100% - 8vh);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NavContainerHome {
+  width: 100%;
+  height: 100%;
+  background-color: var(--cor-primaria-clara);
+}
+
+.BoxHome {
+  width: 5rem; /* Largura reduzida para mostrar apenas os ícones inicialmente */
+  height: 92vh;
+  background-color: var(--cor-primaria);
+  position: relative;
+  text-align: left;
+  z-index: 1;
+  pointer-events: auto;
+  transition: 0.3s;
+  box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3);
+  border-top-right-radius: 20px;
+
+}
+
+.active_BoxHome {
+  width: 25vh; /* Largura aumentada para mostrar os textos */
+  
+}
+
+.MenuIconBoxHome {
+  z-index: 2;
+  width: fit-content;
+  height: 5vh;
+  position: relative;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.line1, .line2, .line3 {
+  width: 2.5rem;
+  height: 0.3rem;
+  margin: 0.2rem;
+  background-color: var(--cor-primaria);
+  border-radius: 50px;
+  transition: 0.2s;
+}
+
+.active .line1 {
+  transform: translate(0, 0.7rem) rotate(45deg);
+}
+
+.active .line2 {
+  opacity: 0;
+}
+
+.active .line3 {
+  transform: translate(0, -0.7rem) rotate(-45deg);
+}
+
+.NavHome {
+  padding-top: 2rem;
+}
+
+.NavHome ul {
+  margin: 0 1.5rem;
+}
+
+.NavHome ul li {
+  list-style: none;
+  margin-bottom: 2.5rem;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.NavHome ul li img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.NavHome ul li a {
+  color: #fff;
+  font-size: 1.75vh;
+  padding: 0.5rem 1rem;
+  display: none; /* Esconde os textos inicialmente */
+  text-decoration: none;
+  font-family: Nexa-Heavy;
+}
+
+.active_BoxHome .NavHome ul li a {
+  display: block; /* Mostra os textos quando a navegação está ativa */
+
+}
+
+.active_BoxHome .NavHome ul li img:hover{
+  background-color: #716fea;
+  border-radius: 0.5rem;
+}
+
+.NavHome ul li:hover{
+  background-color: #716fea;
+  border-radius: 0.5rem;
+}
+
+.NinaHome{
+  margin-left: -265vh;
+  h1{
+    font-size: 50px;
+  }
+  img{
+    height: 50rem;
+    width: 50rem;
+  }
+}
+
+
+
