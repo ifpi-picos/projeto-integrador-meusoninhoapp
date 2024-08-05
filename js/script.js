@@ -25,16 +25,16 @@ function toggleForms() {
  * Nav do Home
  */
 let menuIconNavHome = document.querySelector(".menu-icon-nav-home");
-let nav = document.querySelector(".nav-home");
+let nav = document.querySelector("nav");
 
 menuIconNavHome.onclick = function() {
     menuIconNavHome.classList.toggle("active");
-    nav.classList.toggle("active-nav-home");
+    nav.classList.toggle("active-nav");
 }
 
 document.onclick = function(e) {
     if (!menuIconNavHome.contains(e.target) && !nav.contains(e.target)) {
         menuIconNavHome.classList.remove("active");
-        nav.classList.remove("active-nav-home");
+        nav.classList.remove("active-nav");
     }
 }
