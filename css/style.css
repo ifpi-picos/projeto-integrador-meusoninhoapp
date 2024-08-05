@@ -1,8 +1,9 @@
 :root {
-  --cor-primaria-clara: #c8c7ff;
-  --cor-secundaria: white;
-  --cor-primaria: /* #485cbc*/ #5653f3;
-  
+  --cor-primaria: #5653f3;
+  --cor-secundaria: #c8c7ff;
+  --cor-contraste: #7573F2;
+  --cor-background: white;
+    
 }
 
 @font-face {
@@ -25,7 +26,7 @@
 }
 
 .BodyLogin {
-  background-color: var(--cor-primaria-clara);
+  background-color: var(--cor-secundaria);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -39,7 +40,7 @@
   flex-direction: row;
   height: 65vh;
   width: 115vh;
-  background-color: var(--cor-secundaria);
+  background-color: var(--cor-background);
   border-radius: 50px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
@@ -229,7 +230,7 @@
   justify-content: center;
   min-width: 100%;
   min-height: 100vh;
-  background-color: var(--cor-primaria-clara);
+  background-color: var(--cor-secundaria);
 }
 
 header {
@@ -246,47 +247,46 @@ header {
   top: 0;
 }
 
-.page{
+.page {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 8vh;
 }
 
-nav{
+nav {
   width: 20%;
   max-width: 200px;
   background-color: var(--cor-primaria);
   height: calc(100vh - 8vh);
 }
 
-main{
+main {
   width: 100%;
-  border: 1px solid #000;
 }
 
-.HeaderHome img {
+.header-home img {
   width: 7vh;
   height: 7vh;
 }
 
-.MeioHeaderHome {
+.meio-header-home {
   display: flex;
   align-items: center;
 }
 
-.MeioHeaderHome h1 {
+.meio-header-home h1 {
   margin-left: 1rem;
   font-size: 2rem;
   color: var(--cor-primaria);
 }
 
-.UserIconHome {
+.user-icon-home {
   width: 7vh;
   height: 7vh;
 }
 
-.MainHome {
+.main-home {
   width: 100%;
   height: calc(100% - 8vh);
   display: flex;
@@ -295,14 +295,10 @@ main{
   align-items: center;
 }
 
-.NavContainerHome {
-  width: 100%;
-  height: 100%;
-  background-color: var(--cor-primaria-clara);
-}
 
-.BoxHome {
-  width: 5rem; /* Largura reduzida para mostrar apenas os ícones inicialmente */
+
+nav {
+  width: 4.5%;
   height: 92vh;
   background-color: var(--cor-primaria);
   position: relative;
@@ -312,15 +308,13 @@ main{
   transition: 0.3s;
   box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3);
   border-top-right-radius: 20px;
-
 }
 
-.active_BoxHome {
-  width: 25vh; /* Largura aumentada para mostrar os textos */
-  
+.active-nav-home {
+  width: 30%;
 }
 
-.MenuIconBoxHome {
+.menu-icon-nav-home {
   z-index: 2;
   width: fit-content;
   height: 5vh;
@@ -354,62 +348,47 @@ main{
   transform: translate(0, -0.7rem) rotate(-45deg);
 }
 
-.NavHome {
+nav {
   padding-top: 2rem;
 }
 
-.NavHome ul {
-  margin: 0 1.5rem;
+nav ul {
+  margin: 0 0.3rem;
 }
 
-.NavHome ul li {
+nav ul li {
   list-style: none;
-  margin-bottom: 2.5rem;
   transition: 0.2s ease-in-out;
   display: flex;
   align-items: center;
-  width: 100%;
+  justify-content: center;
+  padding: 1.5rem;
 }
 
-.NavHome ul li img {
-  width: 2rem;
-  height: 2rem;
+nav ul li img {
+  width: 1.6rem;
+  height: 1.5rem;
 }
 
-.NavHome ul li a {
+nav ul li a {
   color: #fff;
   font-size: 1.75vh;
   padding: 0.5rem 1rem;
-  display: none; /* Esconde os textos inicialmente */
+  display: none;
   text-decoration: none;
   font-family: Nexa-Heavy;
 }
 
-.active_BoxHome .NavHome ul li a {
-  display: block; /* Mostra os textos quando a navegação está ativa */
-
+.active-nav-home nav ul li a {
+  display: inline;
 }
 
-.active_BoxHome .NavHome ul li img:hover{
+.active-nav-home nav ul li:hover {
   background-color: #716fea;
   border-radius: 0.5rem;
 }
 
-.NavHome ul li:hover{
+nav ul li:hover {
   background-color: #716fea;
   border-radius: 0.5rem;
 }
-
-.NinaHome{
-  margin-left: -265vh;
-  h1{
-    font-size: 50px;
-  }
-  img{
-    height: 50rem;
-    width: 50rem;
-  }
-}
-
-
-

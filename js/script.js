@@ -1,6 +1,6 @@
 function toggleForms() {
-  var loginForm = document.getElementById('loginForm');
-  var registerForm = document.getElementById('registerForm');
+  var loginForm = document.getElementById('login-form');
+  var registerForm = document.getElementById('cadastro-form');
 
   if (loginForm.style.display === 'none') {
     registerForm.classList.add('fadeOutRight');
@@ -24,17 +24,17 @@ function toggleForms() {
 /**
  * Nav do Home
  */
-let menu_icon_box = document.querySelector(".MenuIconBoxHome");
-let box = document.querySelector(".BoxHome");
+let menuIconNavHome = document.querySelector(".menu-icon-nav-home");
+let nav = document.querySelector(".nav-home");
 
-menu_icon_box.onclick = function() {
-    menu_icon_box.classList.toggle("active");
-    box.classList.toggle("active_BoxHome");
+menuIconNavHome.onclick = function() {
+    menuIconNavHome.classList.toggle("active");
+    nav.classList.toggle("active-nav-home");
 }
 
 document.onclick = function(e) {
-    if (!menu_icon_box.contains(e.target) && !box.contains(e.target)) {
-        menu_icon_box.classList.remove("active");
-        box.classList.remove("active_BoxHome");
+    if (!menuIconNavHome.contains(e.target) && !nav.contains(e.target)) {
+        menuIconNavHome.classList.remove("active");
+        nav.classList.remove("active-nav-home");
     }
 }
