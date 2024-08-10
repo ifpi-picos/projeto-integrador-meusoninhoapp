@@ -1,12 +1,12 @@
 function toggleForms() {
-  var loginForm = document.getElementById('login-form');
-  var registerForm = document.getElementById('cadastro-form');
+  var loginForm = document.getElementById('formlogin');
+  var logonForm = document.getElementById('formlogon');
 
   if (loginForm.style.display === 'none') {
-    registerForm.classList.add('fadeOutRight');
+    logonForm.classList.add('fadeOutRight');
     setTimeout(function() {
-      registerForm.style.display = 'none';
-      registerForm.classList.remove('fadeOutRight');
+      logonForm.style.display = 'none';
+      logonForm.classList.remove('fadeOutRight');
       loginForm.style.display = 'flex';
       loginForm.classList.add('fadeInLeft');
     }, 500);
@@ -15,11 +15,14 @@ function toggleForms() {
     setTimeout(function() {
       loginForm.style.display = 'none';
       loginForm.classList.remove('fadeOutLeft');
-      registerForm.style.display = 'flex';
-      registerForm.classList.add('fadeInRight');
+      logonForm.style.display = 'flex';
+      logonForm.classList.add('fadeInRight');
     }, 500);
   }
 }
+
+
+
 
 /**
  * Nav do Home

@@ -6,56 +6,51 @@
   <title>Login</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="assets/favicons/favicon.ico" type="image/x-icon">
+  <script defer src="js/script.js"></script>
+  <script src="js/cadastro.js"></script>
 </head>
 
-<body class="BodyLogin">
-  <main class="ContainerLogin">
+<body class="body-login">
+  <main class="continer-login">
 
-    <div class="InsideLogin">
+    <div class="inside-login">
 
-      <div class="FormLogin" id="loginForm">
-        <h1 class="TitleLogin">Bem Vindo!</h1>
-        <form class="InsideFormLogin" action="testLogin.php" method="POST">
-          <input type="text" name="email" placeholder="Email" class="InputLogin" required>
-          <input type="password" name="senha" placeholder="Senha" class="InputLogin" required>
-          <button class="ButtonLogin" type="submit" name="submitL">Entrar</button>
+      <div class="form-login" id="formlogin">
+        <h1 class="title-login">Bem Vindo!</h1>
+        <form class="inside-form-login">
+          <input type="text" name="email" placeholder="Email" class="input-login" required>
+          <input type="password" name="senha" placeholder="Senha" class="input-login" required>
+          <button class="button-login" type="submit" name="submit-login">Entrar</button>
         </form>
-        <button type="button" class="ToggleButton" onclick="toggleForms()">Cadastre-se</button>
-        <?php if (isset($_SESSION["ErroLogin"])): ?> 
-          <div class="ContainerErroLogin"><p>ERRO: Email ou senha inválidos.</p></div>
-        <?php 
-          endif; 
-          unset($_SESSION["ErroLogin"]);
-                <?php if (isset($_SESSION["CadastroCriado"])): ?> 
-          <div class="ContainerCadastroLogin"><p>Cadastro criado com sucesso.</p></div>
-        <?php 
-          endif; 
-          unset($_SESSION["CadastroCriado"]);
-        ?>
+        <button type="button" class="toggle-button" onclick="toggleForms()">Cadastre-se</button>
+
+        <div class="container-erro-login"><p>ERRO: Email ou senha inválidos.</p></div>
+
+        <div class="cntainer-cadastro-login"><p>Cadastro criado com sucesso.</p></div>
+
       </div>
 
-      <div class="FormLogin" id="cadastro-form" style="display: none;">
-        <h1 class="TitleLogin">Cadastrar-se</h1>
-        <form action="login.php" method="POST">
-          <input type="text" name="nome" placeholder="Usuário" class="InputCadastro" required>
-          <input type="email" name="email" placeholder="Email" class="InputCadastro" required>
-          <input type="password" name="senha" placeholder="Senha" class="InputCadastro" required>
-          <button class="ButtonCadastro" type="submit" name="submit">Cadastrar</button>
+      <div class="form-logon" id="formlogon" style="display: none;">
+        <h1 class="title-login">Cadastrar-se</h1>
+        <form>
+          <input id="nome" type="text" name="nome" placeholder="Usuário" class="input-logon" required>
+          <input id="email" type="email" name="email" placeholder="Email" class="input-logon" required>
+          <input id="senha" type="password" name="senha" placeholder="Senha" class="input-logon" required>
+          <button onclick="cadastro()" class="button-logon" type="button" name="submit-logon">Cadastrar</button>
         </form>
-        <button type="button" class="ToggleButton" onclick="toggleForms()">Voltar para Entrar</button>
+        <button type="button" class="toggle-button" onclick="toggleForms()">Voltar para Entrar</button>
       </div>
 
     </div>
 
-    <div class="DireitaLogin">
-      <div class="ContentDireitaLogin">
-        <img src="../../Assets/Logo.png" alt="Logo" class="LogoLogin">
-        <h1>Meu Soninho</h1>
+    <div class="direita-login">
+      <div class="content-direita-login">
+        <img src="../../Assets/Logo.png" alt="Logo" class="logo-login">
+        <h1>Meu Soninho</h1>  
         <p>Um sono de qualidade para um<br>dia de produtividade!</p>
       </div>
     </div>
 
   </main>
-  <script src="../../JavaScript/script.js"></script>
 </body>
 </html>
