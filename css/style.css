@@ -32,7 +32,7 @@
   justify-content: center;
 }
 
-.continer-login {
+.container-login {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -243,63 +243,6 @@ header {
   top: 0;
 }
 
-.page {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 8vh;
-}
-
-nav {
-  width: 20%;
-  max-width: 200px;
-  background-color: var(--cor-primaria);
-  height: calc(100vh - 8vh);
-}
-
-main {
-  width: 100%;
-}
-
-header img {
-  width: 7vh;
-  height: 7vh;
-}
-
-.meio-header-home {
-  display: flex;
-  align-items: center;
-}
-
-.meio-header-home h1 {
-  margin-left: 1rem;
-  font-size: 2rem;
-  color: var(--cor-primaria);
-}
-
-.user-icon-home {
-  width: 7vh;
-  height: 7vh;
-}
-
-
-nav {
-  width: 4.5%;
-  height: 92vh;
-  background-color: var(--cor-primaria);
-  position: relative;
-  text-align: left;
-  z-index: 1;
-  pointer-events: auto;
-  transition: 0.3s;
-  box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3);
-  border-top-right-radius: 20px;
-}
-
-.active-nav {
-  width: 30%;
-}
-
 .menu-icon-nav-home {
   z-index: 2;
   width: fit-content;
@@ -334,12 +277,58 @@ nav {
   transform: translate(0, -0.7rem) rotate(-45deg);
 }
 
+.page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8vh;
+}
+
+header img {
+  width: 7vh;
+  height: 7vh;
+}
+
+.meio-header {
+  display: flex;
+  align-items: center;
+}
+
+.meio-header h1 {
+  margin-left: 1rem;
+  font-size: 2rem;
+  color: var(--cor-primaria);
+}
+
+.user-icon-home {
+  width: 7vh;
+  height: 7vh;
+}
+
 nav {
+  width: 4.5%;
+  height: calc(100vh - 8vh);
+  background-color: var(--cor-primaria);
+  position: relative;
+  text-align: left;
+  z-index: 1;
+  pointer-events: auto;
+  transition: 0.3s;
+  box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3);
+  border-top-right-radius: 20px;
   padding-top: 2rem;
+  justify-content: center;
+}
+
+.active-nav {
+  width: 13%;
 }
 
 nav ul {
-  margin: 0 0.3rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
 nav ul li {
@@ -347,7 +336,13 @@ nav ul li {
   transition: 0.2s ease-in-out;
   display: flex;
   align-items: center;
-  padding: 1.5rem;
+  justify-content: center;
+  width: 80%;
+}
+
+nav ul li:hover {
+  background-color: #716fea;
+  border-radius: 0.5rem;
 }
 
 nav ul li img {
@@ -369,10 +364,6 @@ nav ul li a {
   opacity: 1;
 }
 
-nav ul li:hover {
-  background-color: #716fea;
-  border-radius: 0.5rem;
-}
 
 main {
   width: 100%;
