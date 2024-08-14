@@ -1,7 +1,7 @@
 /* Nav do Home */
 
 let menuHamburguer = document.querySelector(".menu-hamburguer");
-let nav = document.querySelector("nav");
+let nav = document.querySelector(".nav-home");
 
 menuHamburguer.onclick = function() {
     menuHamburguer.classList.toggle("active");

@@ -1,8 +1,10 @@
 :root {
   --cor-primaria: #5653f3;
   --cor-secundaria: #c8c7ff;
-  --cor-contraste: #8180f1;
+  --cor-contraste: #9594ef;
   --cor-background: white;
+  --cor-textos: rgb(45, 45, 133);
+  --cor-textos-clara: white;
 }
 
 @font-face {
@@ -305,7 +307,7 @@ header img {
   height: 7vh;
 }
 
-nav {
+.nav-home {
   width: 4.5%;
   height: calc(100vh - 8vh);
   background-color: var(--cor-primaria);
@@ -320,41 +322,43 @@ nav {
   justify-content: center;
 }
 
-.active-nav {
+.active-nav-home {
   width: 13%;
 }
-
-nav ul {
+.nav-home ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
 }
 
-nav ul li {
+.nav-home ul li {
   list-style: none;
   transition: 0.1s;
   display: flex;
+  align-items: center;
   width: 80%;
-  margin-top: 2rem;
+  height: 8%;
+  margin-top: 0.5rem;
   padding-left: 20%;
 }
 
-.active-nav ul li {
-  padding-left: 0;
+.active-nav-home ul li {
+  padding-left: 0.5rem;
+  height: 7%;
 }
 
-nav ul li:hover {
+.nav-home ul li:hover {
   background-color: #716fea;
   border-radius: 0.5rem;
 }
 
-nav ul li img {
+.nav-home ul li img {
   width: 2rem;
   height: 2rem;
 }
 
-nav ul li a {
+.nav-home ul li a {
   color: #fff;
   font-size: 1.75vh;
   padding: 0.5rem 1rem;
@@ -364,7 +368,7 @@ nav ul li a {
   font-family: Nexa-Heavy;
 }
 
-.active-nav ul li a {
+.active-nav-home ul li a {
   opacity: 1;
 }
 
@@ -376,7 +380,7 @@ main {
 }
 
 
-/* css da tela inicial */
+/* css da tela index */
 
 .textos-home{
   width: 60%;
@@ -425,3 +429,87 @@ main {
     margin-right: 5%;
   }
 }
+
+/* css da tela de alarme */
+
+
+
+/* css da tela de músicas */
+
+.container-nina-music{
+  width: 50%;
+  height: 100%;
+}
+
+.container-music {
+  margin: 2rem;
+  padding: 2rem;
+  background-color: var(--cor-secundaria);
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  width: 50%;
+}
+
+.container-muisc h1 {   
+  text-align: center;
+  color: var(--cor-textos);
+} 
+
+.music-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.music-item {
+  padding: 20px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-textos-clara);
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.music-item:hover {
+  transform: translateY(-5px);
+}
+
+.music-item div img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.music-item h3 {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.music-item p {
+  font-size: 0.75rem;
+  margin-top: 5px;
+}
+
+#music-player {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* css da tela do ranking */
+
+
+
+/* css da tela do plano */
+
+
+
+/* css da tela das estatística*/
+
+
+
+/* css da tela de configurações */
+
+
