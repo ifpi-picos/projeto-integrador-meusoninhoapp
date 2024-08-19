@@ -9,10 +9,10 @@
 
 @font-face {
   font-family: Nexa-Heavy;
-  src: local(Nexa-Heavy), url(../Assets/nexa/Nexa-Heavy.ttf);
+  src: local(Nexa-Heavy), url(../assets/nexa/Nexa-Heavy.ttf);
 }
 
-@font-face{
+@font-face{ 
   font-family: Nexa;
   src: local(Nexa-Light), url(../Assets/nexa/Nexa.ttf);
 }
@@ -311,65 +311,59 @@ header img {
   width: 4.5%;
   height: calc(100vh - 8vh);
   background-color: var(--cor-primaria);
-  position: relative;
-  text-align: left;
-  z-index: 1;
   pointer-events: auto;
   transition: 0.3s;
-  box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
   border-top-right-radius: 20px;
-  padding-top: 2rem;
-  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
 }
 
-.active-nav-home {
+.active-nav {
   width: 13%;
 }
-.nav-home ul {
+
+.foto-perfil-home{
+  width: 90%;
+  margin-top: 1rem;
+}
+
+.nav-home a{
+  color: var(--cor-textos-clara);
+  text-decoration: none;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  height: 100%;
+  width: 90%;
+  margin-top: 1rem;
+  padding: 1rem 0rem 1rem;
+  img{
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
-.nav-home ul li {
-  list-style: none;
-  transition: 0.1s;
-  display: flex;
-  align-items: center;
-  width: 80%;
-  height: 8%;
-  margin-top: 0.5rem;
-  padding-left: 20%;
-}
-
-.active-nav-home ul li {
-  padding-left: 0.5rem;
-  height: 7%;
-}
-
-.nav-home ul li:hover {
+.nav-home a:hover {
   background-color: #716fea;
   border-radius: 0.5rem;
 }
 
-.nav-home ul li img {
-  width: 2rem;
-  height: 2rem;
-}
-
-.nav-home ul li a {
-  color: #fff;
-  font-size: 1.75vh;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  opacity: 0;
+.nav-home a span {
+  display: none;
   transition: all 0.1s ease-in-out;
-  font-family: Nexa-Heavy;
 }
 
-.active-nav-home ul li a {
-  opacity: 1;
+.active-nav a{
+  justify-content: start;
+  padding: 0.75rem 0rem 0.75rem 1rem;
+  gap: 1rem;
+}
+
+.active-nav a span{
+  display: block;
 }
 
 main {
@@ -439,15 +433,24 @@ main {
 .container-nina-music{
   width: 50%;
   height: 100%;
+
 }
 
 .container-music {
   margin: 2rem;
-  padding: 2rem;
+  padding: 2%;
   background-color: var(--cor-secundaria);
   border-radius: 2rem;
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
   width: 50%;
+}
+
+.container-music-player {
+  margin-top: 1rem;
+  height: 91.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container-muisc h1 {   
@@ -455,15 +458,35 @@ main {
   color: var(--cor-textos);
 } 
 
+.nav-music{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--cor-primaria);
+  border-radius: 20px;
+  height: 6.5%;
+}
+
+.nav-music p{
+  color: var(--cor-textos);
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  color: var(--cor-textos-clara);
+}
+
 .music-list {
+  padding-top: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
+  overflow-y: scroll;
 }
 
 .music-item {
   padding: 20px;
-  background-color: var(--cor-primaria);
+  background-color: var(--cor-contraste);
   color: var(--cor-textos-clara);
   text-decoration: none;
   border-radius: 10px;
@@ -495,8 +518,8 @@ main {
 
 #music-player {
   width: 100%;
-  margin-top: 20px;
 }
+
 
 /* css da tela do ranking */
 
@@ -508,7 +531,223 @@ main {
 
 /* css da tela das estatística*/
 
+.main-stats{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 
+.d1_estatistica{
+  border-radius: 2.5rem;
+  width: 45rem;
+  height: 25rem;
+  background-color: var(--cor-primaria);
+  margin: 1rem;
+}
+
+.d1_estatistica h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--cor-textos-clara);
+  padding: 1.5rem;
+}
+
+
+.d2_estatistica, .d3_estatistica, .d4_estatistica {
+  border-radius: 2rem;
+  width: 32rem;
+  height: 18rem;
+  background-color: var(--cor-contraste);
+  margin: 1rem;
+}
+
+.d2_estatistica h2, .d3_estatistica h2, .d4_estatistica h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--cor-textos-clara);
+  padding: 1rem;
+}
+
+input, button, textarea {
+  font-size: 0.875rem;
+}
+
+/* Basis */
+.btn-day {
+  font-family: 'Nexa-Heavy';
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 99;
+  outline: 0;
+  border-radius: 1rem;
+  transition: 0.4s all;
+}
+
+.btn-day.active {
+  color: var(--cor-textos-clara);
+  font-weight: 600;
+  z-index: 99;
+}
+
+.btn-day.active::before {
+  position: absolute;
+  content: '';
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--cor-primaria);
+  border-radius: 1rem;
+  z-index: -1;
+}
+
+.text-field {
+  padding: 0.625rem;
+  height: 3.125rem;
+  width: 12.5rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 1rem;
+  margin: 0px 0.625rem 0 0;
+}
+
+.title {
+  font-size: 1.3rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+}
+
+/* calendario das estatisticas */
+
+.calendar-assets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.625rem;
+}
+
+#currentDate{
+  text-align:center;
+  font-size:1.25rem;
+}
+
+.field {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  margin: 1.25rem 0;
+}
+
+.field label {
+  margin: 0.125rem;
+}
+
+.form-input {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.day-assets {
+  display: flex;
+  justify-content: space-between;
+  width: 20.25rem;
+}
+.day-assets .btn:nth-child(2) i {
+  padding: 0 0.625rem 0 0 !important;
+}
+
+.conatainer-calendar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5rem;
+}
+
+.conatainer-calendar-h1{
+  color: var(--cor-textos);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.calendar {
+  height: 20rem;
+  width: 30rem;
+  user-select: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1.125rem 1.125rem 0px 0px;
+  padding: 0 0.5rem 0 0.5rem;
+  height: 3.125rem;
+  width: 100%;
+  color: var(--cor-primaria);
+}
+
+.month {
+  font-size: 1.25rem;
+  color: var(--cor-primaria);
+}
+
+.icon {
+  padding: 0.625rem;
+  font-size: 1rem;
+  margin: 0 0 0 0.3125rem;
+  background: #0000;
+  color: var(--cor-primaria);
+  border: none;
+  cursor: pointer;
+  outline: 0;
+}
+
+#calendar {
+  width: 100%;
+}
+
+.weekends th {
+  font-size: 1rem;
+  color: var(--cor-contraste);
+  font-weight: 400;
+  width: 2.5rem;
+  margin: 0.625rem 0;
+}
+
+#calendar tr {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 0.1875rem;
+}
+
+#calendar td {
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 99;
+}
 
 /* css da tela de configurações */
 

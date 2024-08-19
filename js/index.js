@@ -1,4 +1,4 @@
-/* Nav do Home */
+/* Nav matriz */
 
 let menuHamburguer = document.querySelector(".menu-hamburguer");
 let nav = document.querySelector(".nav-home");

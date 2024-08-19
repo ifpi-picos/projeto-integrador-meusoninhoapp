@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,6 @@
     <script defer src="js/index.js"></script>
     <script defer src="js/music.js"></script>
 </head>
-
 <body class="body-home">
   <header>
     <div class="menu-hamburguer">
@@ -27,69 +25,68 @@
   </header>
   <div class="page">
     <nav class="nav-home">
-      <ul>
-        <img src="assets/UserIcon.svg" alt="Foto de Perfil">
-        <li><img src="assets/NavIcons/HomeIcon.png" alt="Início"><a href="index.html">Início</a></li>
-        <li><img src="assets/NavIcons/AlarmIcon.png" alt="Alarme"><a href="alarm.html">Alarme</a></li>
-        <li><img src="assets/NavIcons/MusicIcon.png" alt="Música"><a href="music.html">Músicas</a></li>
-        <li><img src="assets/NavIcons/RankIcon.png" alt="Ranking"><a href="rank.html">Ranking</a></li>
-        <li><img src="assets/NavIcons/PlanIcon.png" alt="Plano"><a href="plan.html">Plano</a></li>
-        <li><img src="assets/NavIcons/StatsIcon.png" alt="Estatísticas"><a href="stats.html">Estatísticas</a></li>
-        <li><img src="assets/NavIcons/ConfigIcon.png" alt="Configurações"><a href="config.html">Configurações</a></li>
-      </ul>
+      <img class="foto-perfil-home" src="assets/UserIcon.svg" alt="Foto de Perfil">
+      <a href="index.html"><img src="assets/NavIcons/HomeIcon.png" alt="Início"><span>Início</span></a>
+      <a href="alarm.html"><img src="assets/NavIcons/AlarmIcon.png" alt="Alarme"><span>Alarme</span></a>
+      <a href="music.html"><img src="assets/NavIcons/MusicIcon.png" alt="Música"><span>Músicas</span></a>
+      <a href="rank.html"><img src="assets/NavIcons/RankIcon.png" alt="Ranking"><span>Ranking</span></a>
+      <a href="plan.html"><img src="assets/NavIcons/PlanIcon.png" alt="Plano"><span>Plano</span></a>
+      <a href="stats.html"><img src="assets/NavIcons/StatsIcon.png" alt="Estatísticas"><span>Estatísticas</span></a>
+      <a href="config.html"><img src="assets/NavIcons/ConfigIcon.png" alt="Configurações"><span>Configurações</span></a>
     </nav>
     <main>
-      <div class="container-nina-music"></div>
+      <div class="container-nina-music">
+      </div>
       <div class="container-music">
-        <h1>Escolha sua música para dormir melhor</h1>
-        <hr>
         <nav class="nav-music">
-          <ul>
-            <li><a href="#">Lo-Fi</a></li>
-            <li><a href="#">Sons da Natureza</a></li>
-            <li><a href="#">Música Calma</a></li>
-            <li><a href="#">Música Calma</a></li>
-            <li><a href="#">Música Calma</a></li>
+            <p>Música Clássica</p>
+            <p>Sons Ambiente</p>
+            <p>Lo-fi</p>
+            <p>Música Acústica</p>
+            <p>Jazz Suave</p>
           </ul>
         </nav>
-        <div class="music-list">
-          <div class="music-item" href="#" data-src="music1.mp3">
-            <div>
-              <h3>Lo-Fi</h3>
-              <p>Relaxe e durma profundamente com essa suave melodia.</p>
+        <div class="container-music-player">
+            <div class="music-list">
+              <div class="music-item" href="#" data-src="music1.mp3">
+                <div>
+                  <h3>Lo-Fi</h3>
+                  <p>Relaxe e durma profundamente com essa suave melodia.</p>
+                </div>
+                <div><img src="music2.jpg" alt="Música1"></div>
+              </div>
+              <div class="music-item" href="#" data-src="music1.mp3">
+                <div>
+                  <h3>Sons da Natureza</h3>
+                  <p>Relaxe e durma profundamente com essa suave melodia.</p>
+              </div>
+              <div><img src="music2.jpg" alt="Música1"></div>
             </div>
-            <div><img src="music2.jpg" alt="Música1"></div>
-          </div>
-          <div class="music-item" href="#" data-src="music1.mp3">
-            <div>
-              <h3>Sons da Natureza</h3>
-              <p>Relaxe e durma profundamente com essa suave melodia.</p>
+            <div class="music-item" href="#" data-src="music1.mp3">
+              <div>
+                <h3>Música Calma</h3>
+                <p>Relaxe e durma profundamente com essa suave melodia.</p>
+              </div>
+              <div><img src="music2.jpg" alt="Música1"></div>
             </div>
-            <div><img src="music2.jpg" alt="Música1"></div>
-          </div>
-          <div class="music-item" href="#" data-src="music1.mp3">
-            <div>
-              <h3>Música Calma</h3>
-              <p>Relaxe e durma profundamente com essa suave melodia.</p>
+            <div class="music-item" href="#" data-src="music1.mp3">
+              <div>
+                <h3>Música Calma</h3>
+                <p>Relaxe e durma profundamente com essa suave melodia.</p>
+              </div>
+              <div><img src="music2.jpg" alt="Música1"></div>
             </div>
-            <div><img src="music2.jpg" alt="Música1"></div>
-          </div>
-          <div class="music-item" href="#" data-src="music1.mp3">
-            <div>
-              <h3>Música Calma</h3>
-              <p>Relaxe e durma profundamente com essa suave melodia.</p>
+            <div class="music-item" href="#" data-src="music1.mp3">
+              <div>
+                <h3>Música Calma</h3>
+                <p>Relaxe e durma profundamente com essa suave melodia.</p>
+              </div>
+              <div><img src="music2.jpg" alt="Música1"></div>
             </div>
-            <div><img src="music2.jpg" alt="Música1"></div>
+            
           </div>
-          <div class="music-item" href="#" data-src="music1.mp3">
-            <div>
-              <h3>Música Calma</h3>
-              <p>Relaxe e durma profundamente com essa suave melodia.</p>
-            </div>
-            <div><img src="music2.jpg" alt="Música1"></div>
-          </div>
+          <audio id="music-player" controls>
         </div>
-        <audio id="music-player" controls>
           <source src="" type="audio/mp3">
         </audio>
       </div>
