@@ -31,7 +31,7 @@
             <a href="music.html"><img src="assets/NavIcons/MusicIcon.png" alt="Música"><span>Músicas</span></a>
             <a href="rank.html"><img src="assets/NavIcons/RankIcon.png" alt="Ranking"><span>Ranking</span></a>
             <a href="plan.html"><img src="assets/NavIcons/PlanIcon.png" alt="Plano"><span>Plano</span></a>
-            <a href="stats.html"><img src="assets/NavIcons/StatsIcon.png" alt="Estatísticas"><span>Estatísticas</span></a>
+            <a style="background-color: var(--cor-contraste);" href="stats.html"><img src="assets/NavIcons/StatsIcon.png" alt="Estatísticas"><span>Estatísticas</span></a>
             <a href="config.html"><img src="assets/NavIcons/ConfigIcon.png" alt="Configurações"><span>Configurações</span></a>
         </nav>
         <main class="main-stats">
@@ -50,6 +50,49 @@
                 </div>
             <div class="d1_estatistica">
                 <h2> Gráfico da qualidade do sono: </h2>
+                <canvas id="meuGrafico" style="aspect-ratio: 16/9; width: 100%; height: 50%; padding: 20px; border: 1px solid #ddd; border-radius: 10px"></canvas>
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <script>
+                    const ctx = document.getElementById('meuGrafico').getContext('2d');
+                    const meuGrafico = new Chart(ctx, {
+                        type: 'pie',
+                        data: {
+                        labels: ['Produto A', 'Produto B', 'Produto C', 'Produto D', 'Produto E'],
+                        datasets: [{
+                            label: 'Vendas',
+                            data: [12500, 10000, 3000, 5000, 8000],
+                        }]
+                        },
+                        options: {
+                        plugins: {
+                            tooltip: {
+                            callbacks: {
+                                label: context => {
+                                return ' R$ ' + context.parsed.toLocaleString('pt-BR', {
+                                    minimumFractionDigits: 2,
+                                    maximumFractionDigits: 2
+                                });
+                                }
+                            }
+                            },
+                            legend: {
+                            position: 'left',
+                            labels: {
+                                font: { size: 18 }
+                            },
+                            },
+                            title: {
+                            display: true,
+                            text: 'Total de Vendas por Produto',
+                            font: { size: 24 },
+                            padding: { bottom: 30 }
+                            }
+                        },
+                        responsive: false,
+                        maintainAspectRatio: true
+                        }
+                    });
+                    </script>
             </div>
             <div class="d2_estatistica">
                 <h2> Horas de sono: </h2>

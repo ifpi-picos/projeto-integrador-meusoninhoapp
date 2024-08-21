@@ -2,10 +2,10 @@ const URL_API = location.hostname === "localhost" || location.hostname === "127.
 "http://localhost:3000" : "https://meusoninhoapp-backend.onrender.com"
 
 
-function cadastro(){
-const nameInput = document.querySelector("#nome")
-const emailInput = document.querySelector("#email")
-const passwordInput = document.querySelector("#senha")
+function register(){
+const nameInput = document.querySelector("#name-register")
+const emailInput = document.querySelector("#email-register")
+const passwordInput = document.querySelector("#password-register")
 
   const user = {
     name: nameInput.value,
@@ -32,6 +32,37 @@ const passwordInput = document.querySelector("#senha")
 }
 
 
+function login() {
+  const emailInput = document.querySelector("#email-login");
+  const passwordInput = document.querySelector("#password-login");
+
+  const user = {
+    email: emailInput.value,
+    password: passwordInput.value
+  };
+
+  fetch(`${URL_API}/login`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(user)
+  })
+    .then(response => response.json())
+    .then(json => {
+      console.log(json); 
+      const token = json.data.token;
+      localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(json.data.user));
+      alert("Login successful!");
+
+      window.location.href = "index.html";
+    })
+    .catch(error => {
+      console.log(error);
+      alert("Login failed!");
+    });
+}
 
 /* Troca dos formulários */
 

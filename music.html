@@ -28,7 +28,7 @@
       <img class="foto-perfil-home" src="assets/UserIcon.svg" alt="Foto de Perfil">
       <a href="index.html"><img src="assets/NavIcons/HomeIcon.png" alt="Início"><span>Início</span></a>
       <a href="alarm.html"><img src="assets/NavIcons/AlarmIcon.png" alt="Alarme"><span>Alarme</span></a>
-      <a href="music.html"><img src="assets/NavIcons/MusicIcon.png" alt="Música"><span>Músicas</span></a>
+      <a style="background-color: var(--cor-contraste);" href="music.html"><img src="assets/NavIcons/MusicIcon.png" alt="Música"><span>Músicas</span></a>
       <a href="rank.html"><img src="assets/NavIcons/RankIcon.png" alt="Ranking"><span>Ranking</span></a>
       <a href="plan.html"><img src="assets/NavIcons/PlanIcon.png" alt="Plano"><span>Plano</span></a>
       <a href="stats.html"><img src="assets/NavIcons/StatsIcon.png" alt="Estatísticas"><span>Estatísticas</span></a>
@@ -46,7 +46,7 @@
             <p>Jazz Suave</p>
           </ul>
         </nav>
-        <div class="container-music-player">
+        <div class="container-music-list">
             <div class="music-list">
               <div class="music-item" href="#" data-src="music1.mp3">
                 <div>
@@ -85,7 +85,42 @@
             </div>
             
           </div>
-          <audio id="music-player" controls>
+
+
+          <div class="container-audio-player">
+            <div class="controls">
+              <button class="skip-time-backs">
+                <img src="assets/music-icons/skips.png" alt="Voltar 10 segundos">
+              </button>
+              <button class="skip-back">
+                <img src="assets/music-icons/skip.png" alt="Voltar música">
+              </button>
+              <button class="play">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                  <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                </svg>
+              </button>
+              <button class="skip-forward">
+                <img src="assets/music-icons/skip.png" alt="Avançar música">
+              </button>
+              <button class="skip-time-forward">
+                <img src="assets/music-icons/skips.png" alt="Avançar 10 segundos">
+              </button>
+            </div>
+
+            <div class="progress-items">
+              <div class="current-time">00:00</div>
+              <div class="progress">
+                  <div class="p-bar"><div class="p-ball"></div></div>
+                  
+                  
+              </div>
+              <div class="duration">00:00</div>
+            </div>
+
+          </div>
+
+
         </div>
           <source src="" type="audio/mp3">
         </audio>

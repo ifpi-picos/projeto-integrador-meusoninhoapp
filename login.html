@@ -17,9 +17,9 @@
       <div class="form-login" id="formlogin">
         <h1 class="title-login">Bem Vindo!</h1>
         <form class="inside-form-login">
-          <input type="text" name="email" placeholder="Email" class="input-login" required>
-          <input type="password" name="senha" placeholder="Senha" class="input-login" required>
-          <button class="button-login" type="submit" name="submit-login">Entrar</button>
+          <input id="email-login" type="text" name="email" placeholder="Email" class="input-login" required>
+          <input id="password-login" type="password" name="senha" placeholder="Senha" class="input-login" required>
+          <button class="button-login" onclick="login()" type="submit" name="submit-login">Entrar</button>
         </form>
         <button type="button" class="toggle-button" onclick="toggleForms()">Cadastre-se</button>
 
@@ -31,24 +31,22 @@
       <div class="form-register" id="formregister" style="display: none;">
         <h1 class="title-login">Cadastrar-se</h1>
         <form>
-          <input id="nome" type="text" name="nome" placeholder="Usuário" class="input-register" required>
-          <input id="email" type="email" name="email" placeholder="Email" class="input-register" required>
-          <input id="senha" type="password" name="senha" placeholder="Senha" class="input-register" required>
-          <button onclick="cadastro()" class="button-register" type="button" name="submit-register">Cadastrar</button>
+          <input id="name-register" type="text" name="nome" placeholder="Usuário" class="input-register" required>
+          <input id="email-register" type="email" name="email" placeholder="Email" class="input-register" required>
+          <input id="password-register" type="password" name="senha" placeholder="Senha" class="input-register" required>
+          <button onclick="register()" class="button-register" type="button" name="submit-register">Cadastrar</button>
         </form>
         <button type="button" class="toggle-button" onclick="toggleForms()">Voltar para Entrar</button>
       </div>
 
     </div>
-
     <div class="direita-login">
       <div class="content-direita-login">
-        <img src="../../Assets/Logo.png" alt="Logo" class="logo-login">
+        <img src="assets/logo.png" alt="Logo" class="logo-login">
         <h1>Meu Soninho</h1>  
         <p>Um sono de qualidade para um<br>dia de produtividade!</p>
       </div>
     </div>
-
   </main>
 </body>
 </html>
