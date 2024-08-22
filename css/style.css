@@ -294,6 +294,7 @@ header img {
 .meio-header {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .meio-header h1 {
@@ -306,14 +307,15 @@ header img {
   width: 3rem;
   height: 3rem;
   transition: 0.25s ease-in-out;
-}
-.logout img{
-  width: 100%;
-  height: 100%;
+  img{
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .logout:hover{
-  width: 2.75rem;
+  width: 3.25rem;
+  height: 3.25rem;
 }
 
 .nav-home {
@@ -349,6 +351,7 @@ header img {
   width: 90%;
   margin-top: 1rem;
   padding: 1rem 0rem 1rem;
+  border-radius: 0.5rem;
   img{
     width: 2rem;
     height: 2rem;
@@ -356,8 +359,7 @@ header img {
 }
 
 .nav-home a:hover {
-  background-color: #716fea;
-  border-radius: 0.5rem;
+  background-color: var(--cor-contraste);
 }
 
 .nav-home a span {

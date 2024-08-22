@@ -1,16 +1,15 @@
 const URL_API = location.hostname === "localhost" || location.hostname === "127.0.0.1" ? 
-"http://localhost:3000" : "https://meusoninhoapp-backend.onrender.com"
-
+"http://localhost:3000" : "https://meusoninhoapp-backend.onrender.com";
 
 function register(){
-const nameInput = document.querySelector("#name-register")
-const emailInput = document.querySelector("#email-register")
-const passwordInput = document.querySelector("#password-register")
+const nameInputRegister = document.querySelector("#name-register")
+const emailInputRegister = document.querySelector("#email-register")
+const passwordInputRegister = document.querySelector("#password-register")
 
   const user = {
-    name: nameInput.value,
-    email: emailInput.value,
-    password: passwordInput.value
+    name: nameInputRegister.value,
+    email: emailInputRegister.value,
+    password: passwordInputRegister.value
   }
 
   fetch(`${URL_API}/users`, {
@@ -33,12 +32,12 @@ const passwordInput = document.querySelector("#password-register")
 
 
 function login() {
-  const emailInput = document.querySelector("#email-login");
-  const passwordInput = document.querySelector("#password-login");
+  const emailInputLogin = document.querySelector("#email-login");
+  const passwordInputLogin = document.querySelector("#password-login");
 
   const user = {
-    email: emailInput.value,
-    password: passwordInput.value
+    email: emailInputLogin.value,
+    password: passwordInputLogin.value
   };
 
   fetch(`${URL_API}/login`, {
@@ -50,10 +49,10 @@ function login() {
   })
     .then(response => response.json())
     .then(json => {
-      console.log(json); 
-      const token = json.data.token;
+      console.log(json);
+      const token = json.token;
       localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify(json.data.user));
+      localStorage.setItem("user", JSON.stringify(json.user));
       alert("Login successful!");
 
       window.location.href = "index.html";
