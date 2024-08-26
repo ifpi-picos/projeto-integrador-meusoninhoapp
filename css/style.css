@@ -489,9 +489,10 @@ main {
 .music-list {
   padding-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
   overflow-y: scroll;
+  width: 100%;
 }
 
 .music-item {
@@ -505,15 +506,16 @@ main {
   display: flex;
   flex-direction: row;
   cursor: pointer;
+  width: 100%;
+}
+
+.music-item img{
+  border-radius: 10px;
+  height: 100px;
 }
 
 .music-item:hover {
   transform: translateY(-5px);
-}
-
-.music-item div img {
-  width: 100%;
-  border-radius: 10px;
 }
 
 .music-item h3 {
@@ -531,6 +533,7 @@ main {
   height: 15%;
   border-radius: 20px;
   padding: 0 1.5rem 0 1.5rem;
+  margin-top: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -545,14 +548,24 @@ main {
   height: 55%;
 }
 
-.skip-forward, .skip-back, .skip-time-back{
+.skip-forward, .skip-time-forward, .skip-back, .skip-time-back{
   border: none;
   background: none; 
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
+  transition: all 0.2s ease-in-out;
+  margin: 0 0.5rem 0 0.5rem;
+}
+.skip-forward:hover, .skip-time-forward:hover, .skip-back:hover, .skip-time-back:hover{
+  width: 2.2rem;
+  height: 2.2rem; 
+}
+
+.skip-back, .skip-time-back{
+  transform: rotate(180deg);
 }
 
 .play{
