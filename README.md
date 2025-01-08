@@ -53,13 +53,8 @@ src/
 
 ## 3. 📂 Funcionalidades
 - **Monitoramento do sono**:
-  - Permite registrar horários de sono e despertar, com gráficos detalhados.  
-- **Relatórios visuais**:
-  - Gráficos para análise da qualidade do sono semanal e mensal.  
-- **Configuração de rotinas**:
-  - Agendamento de alertas e lembretes para melhorar os hábitos de sono.  
-- **Cadastro de usuários**:
-  - Sistema para gerenciamento de perfis e preferências individuais.  
+  - Permite registrar horários de sono e despertar, com gráficos detalhados.
+...
 
 ---
 
