@@ -54,7 +54,7 @@ src/
 ## 3. 📂 Funcionalidades
 - **Monitoramento do sono**:
   - Permite registrar horários de sono e despertar, com gráficos detalhados.
-...
+(adicione as funcionalidades aqui, no mesmo modelo de cima)
 
 ---
 
@@ -87,7 +87,7 @@ bun run start
 ## 5. 🎨 Design do Aplicativo  
 ### **Telas principais**:
 - **Tela de Login e Cadastro**: Registro e autenticação de usuários.  
-- **Tela Inicial**: ...
+(adicione as informações aqui, no mesmo modelo de cima)
 
 ---
 
