@@ -51,7 +51,9 @@
 ## 4. ⚙️ Configuração e Instalação
 
 ### Pré-requisitos
-
+  - Visual Studio Code
+  - Bun
+  - Ferramenta de deploy (para banco de dados)
 
 ### Passos
 ```bash
@@ -110,7 +112,8 @@ bun run start
   - Andreia Maria Vieira
   - Antonio Enzo Bezerra
   - Neemias Lucio Nobre
-  - Kauanny Maria
+  - Kauanny Maria Lopes
+  - Lincoln Gustavo Soaros
 
 ---
 
