@@ -16,6 +16,7 @@
     assets/      # Imagens, ícones, etc.
     css/         # Estilização do site
     js/          # Script (JavaScript)
+  páginas html
   ```
 - **Arquitetura Back-end**:
   ```
