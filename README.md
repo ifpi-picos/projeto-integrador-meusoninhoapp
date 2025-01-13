@@ -1,14 +1,11 @@
-
-
 # ✨ **Documentação do Projeto: Meu Soninho** ✨
 
 ## 1. 🔍 Introdução
 - **Nome do projeto**: Meu Soninho  
 - **Empresa**: DreamSpace  
-- **Descrição**: Um aplicativo voltado para melhorar a qualidade do sono dos usuários, fornecendo ferramentas para monitorar hábitos, criar rotinas e promover um sono saudável de forma lúdica.  
-- **Objetivo**: Promover hábitos de sono saudáveis através de uma solução acessível e intuitiva, auxiliando na qualidade de vida dos usuários.  
-- **Público-alvo**: Pessoas interessadas em desenvolver e manter rotinas de sono mais saudáveis.  
-
+- **Descrição**: Um aplicativo voltado para melhorar a qualidade do sono dos usuários, fornecendo ferramentas para monitorar hábitos, criar rotinas e promover um sono saudável de forma lúdica com a mascote Nina.  
+- **Objetivo**: Melhorar a qualidade de sono do usuário, através do monitoramento e acompanhament do sono diário e mensal.  
+- **Público-alvo**: Pessoas com problema de sono ou interessadas em desenvolver e manter rotinas de sono mais saudáveis.  
 
 
 ## 2. 🌐 Estrutura do Projeto  
@@ -19,10 +16,36 @@ src/
   assets/      # Imagens, ícones, etc.
   css/         # Estilização do site
   js/          # Scripts (JavaScript)
-páginas html   # Arquivos HTML principais
+páginas html   # Arquivos HTML principais 
 ```
 
-### **Arquitetura Back-end**:
+### **Telas principais**:
+- **Tela de Login e Cadastro**: Registro e autenticação de usuários.  
+- **Tela de Início**: Mostra a mascote e posição do usuário no ranking.
+- **Tela de Alarme**: Definição de alarme.
+- **Tela de Ranking**: Ranking de posições entre usuários.
+- **Tela de To-Do List**: Registro de afazeres diários.
+- **Tela de Estatísticas**: Exibe dados coletados e analisados de forma visual.
+- **Tela de Configurações**: Ajusta preferências e opções de uso do site.
+
+### **Paleta de cores do site**:
+```css
+:root {
+  --cor-primaria: #5653f3;
+  --cor-secundaria: #c8c7ff;
+  --cor-contraste: #9594ef;
+  --cor-background: #ffffff;
+  --cor-textos: #2d2d85;
+  --cor-textos-clara: #ffffff;
+}
+```
+## 3. 📊 APIs e Serviços
+- **APIs utilizadas**:
+  - Charts.js: Renderização de gráficos dinâmicos para visualização de dados.  
+- **Endpoints do Back-end**:
+  - **/users**: Gerenciamento de usuários (CRUD)
+
+### 4 **Arquitetura Back-end**:
 ```
 node_modules/  # Dependências do projeto
 prisma/
@@ -35,7 +58,7 @@ src/
 .env           # Variáveis de ambiente
 ```
 
-### **Tecnologias e Ferramentas Usadas**:
+### 5. **Tecnologias e Ferramentas Usadas**:
 - **Front-end**:
   - HTML, CSS e JavaScript puro
 - **Back-end**:
@@ -49,16 +72,7 @@ src/
 - **Bibliotecas**:
   - Charts.js (para gráficos e visualizações de dados)
 
----
-
-## 3. 📂 Funcionalidades
-- **Monitoramento do sono**:
-  - Permite registrar horários de sono e despertar, com gráficos detalhados.
-(adicione as funcionalidades aqui, no mesmo modelo de cima)
-
----
-
-## 4. ⚙️ Configuração e Instalação  
+## 6. ⚙️ Configuração e Instalação  
 
 ### Pré-requisitos:
 - **Editor**: Visual Studio Code  
@@ -82,57 +96,17 @@ bun install
 bun run start
 ```
 
----
-
-## 5. 🎨 Design do Aplicativo  
-### **Telas principais**:
-- **Tela de Login e Cadastro**: Registro e autenticação de usuários.  
-(adicione as informações aqui, no mesmo modelo de cima)
-
----
-
-## 6. 📊 APIs e Serviços
-- **APIs utilizadas**:
-  - Charts.js: Renderização de gráficos dinâmicos para visualização de dados.  
-- **Endpoints do Back-end**:
-  - **/users**: Gerenciamento de usuários (CRUD).  
-
----
-
-## 7. 🎨 Estilo e Temas  
-
-### **Tema padrão**:
-```css
-:root {
-  --cor-primaria: #5653f3;
-  --cor-secundaria: #c8c7ff;
-  --cor-contraste: #9594ef;
-  --cor-background: #ffffff;
-  --cor-textos: #2d2d85;
-  --cor-textos-clara: #ffffff;
-}
-```
-
-### **Fonte Utilizada**:
-- Nexa Heavy
-
----
-
-## 8. 🔍 Contribuição
+## 7. 🔍 Contribuição
 - **Colaboradores**:
   - Claryanne Mel Moura  
-  - Andreia Maria Vieira  
+  - Andréia Maria do Nascimento Vieira  
   - Antonio Enzo Bezerra  
   - Neemias Lucio Nobre  
   - Kauanny Maria Lopes  
   - Lincoln Gustavo Soares  
 
----
-
-## 9. 🔗 Referências
+## 8. 🔗 Referências
 - [Prisma](https://www.prisma.io/docs)  
 - [Hono](https://hono.dev/docs/)  
 - [Bun](https://bun.sh/docs)  
 - [Charts.js](https://www.chartjs.org/docs/latest/)  
-
----
