@@ -40,7 +40,7 @@ function login() {
     password: passwordInputLogin.value
   };
 
-  fetch(`${URL_API}/login`, {
+  fetch(`${URL_API}/users`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
