@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../MeuSoninhoApp-Backend"
+		},
+		{
+			"path": "../Bot AoMosso"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "projeto-integrador-meusoninhoapp",
+		"git.ignoreLimitWarning": true
+	}
+}

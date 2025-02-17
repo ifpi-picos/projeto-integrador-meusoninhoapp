@@ -40,28 +40,38 @@ function login() {
     password: passwordInputLogin.value
   };
 
-  fetch(`${URL_API}/users`, {
+  fetch(`${URL_API}/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
     body: JSON.stringify(user)
   })
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Erro no login: " + response.statusText);
+      }
+      return response.json();
+    })
     .then(json => {
-      console.log(json);
-      const token = json.token;
-      localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify(json.user));
-      alert("Login successful!");
+      if (!json.token) {
+        throw new Error("Token não recebido");
+      }
 
+      console.log(json);
+
+      localStorage.setItem("token", json.token);
+      localStorage.setItem("userId", json.user.id); 
+
+      alert("Login successful!");
       window.location.href = "index.html";
     })
     .catch(error => {
-      console.log(error);
-      alert("Login failed!");
+      console.error(error);
+      alert("Falha no login! Verifique suas credenciais.");
     });
 }
+
 
 /* Troca dos formulários */
 
