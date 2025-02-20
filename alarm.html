@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alarme</title>
@@ -9,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="manifest" href="manifest.json" />
     <script defer src="js/index.js"></script>
+    <script defer src="js/alarm.js"></script> 
     <script src="js/auth.js"></script>
 </head>
 <body class="body-home">
@@ -36,7 +36,43 @@
       <a href="config.html"><img src="assets/NavIcons/ConfigIcon.png" alt="Configurações"><span>Configurações</span></a>
     </nav>
     <main>
-    </main>
-  </div>
+
+      <div class="container">
+        
+        <div class="alarm-info">
+          <p>Gerencie seus alarmes!</p>
+        </div>
+    
+      
+        <div class="card">
+          <div class="time">
+            <img src="assets/alarm-clock-icon.svg" alt="Ícone de Alarme">
+            <span>07:30</span>
+          </div>
+          <div class="toggle"></div>
+        </div>
+    
+        <div class="card">
+          <div class="time">
+            <img src="assets/alarm-clock-icon.svg" alt="Ícone de Alarme">
+            <span>09:00</span>
+          </div>
+          <div class="toggle active"></div>
+        </div>
+    
+        <div class="card">
+          <div class="time">
+            <img src="assets/alarm-clock-icon.svg" alt="Ícone de Alarme">
+            <span>18:00</span>
+          </div>
+          <div class="toggle"></div>
+        </div>
+    
+        
+        <div class="add-alarm">+</div>
+      </div>
+     
+
+
 </body>
 </html>
