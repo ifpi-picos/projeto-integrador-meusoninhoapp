@@ -35,133 +35,48 @@
       <a href="stats.html"><img src="assets/NavIcons/StatsIcon.png" alt="Estatísticas"><span>Estatísticas</span></a>
       <a href="config.html"><img src="assets/NavIcons/ConfigIcon.png" alt="Configurações"><span>Configurações</span></a>
     </nav>
+
     <main>
-      <div class="container-nina-music">
-      </div>
-      <div class="container-music">
-        <nav class="nav-music">
-            <p>Música Clássica</p>
-            <p>Sons Ambiente</p>
-            <p>Lo-fi</p>
-            <p>Música Acústica</p>
-            <p>Jazz Suave</p>
-          </ul>
-        </nav>
-        <div class="container-music-list">
-            <div class="music-list">
-              <div class="music-item" href="#" data-src="music1.mp3">
-                <div>
-                  <h3>Música 1</h3>
-                  <p>Relaxe e durma profundamente com essa suave melodia.</p>
+        <div class="nina-music"></div>
+        <div id="container-music">
+            <section>
+                <div class="tab-music-buttons">
+                    <button class="tab-music-btn active" content-id="musica-classica"> 
+                        Música Clássica
+                    </button>
+                    <button class="tab-music-btn" content-id="lo-fi">
+                        Lo-Fi
+                    </button>
+                    <button class="tab-music-btn" content-id="som-ambiente">
+                        Som Ambiente
+                    </button>
+                    <button class="tab-music-btn" content-id="jazz-suave">
+                        Jazz Suave
+                    </button>
+                    <button class="tab-music-btn" content-id="ruidos">
+                        Ruídos
+                    </button>
                 </div>
-                <div><img src="assets/notrack.jpg" alt="Música1"></div>
-              </div>
-              <div class="music-item" href="#" data-src="music1.mp3">
-                <div>
-                  <h3>Música 2</h3>
-                  <p>Relaxe e durma profundamente com essa suave melodia.</p>
-                </div>
-                <div><img src="assets/notrack.jpg" alt="Música1"></div>
-              </div>
-              <div class="music-item" href="#" data-src="music1.mp3">
-                <div>
-                  <h3>Música 3</h3>
-                  <p>Relaxe e durma profundamente com essa suave melodia.</p>
-                </div>
-                <div><img src="assets/notrack.jpg" alt="Música1"></div>
-              </div>
-              <div class="music-item" href="#" data-src="music1.mp3">
-                <div>
-                  <h3>MMúsica 4</h3>
-                  <p>Relaxe e durma profundamente com essa suave melodia.</p>
-                </div>
-                <div><img src="assets/notrack.jpg" alt="Música1"></div>
-              </div>
-              <div class="music-item" href="#" data-src="music1.mp3">
-                <div>
-                  <h3>Música 5</h3>
-                  <p>Relaxe e durma profundamente com essa suave melodia.</p>
-                </div>
-                <div><img src="assets/notrack.jpg" alt="Música1"></div>
-              </div>
-              <div class="music-item" href="#" data-src="music1.mp3">
-                <div>
-                  <h3>Música </h3>
-                  <p>Relaxe e durma profundamente com essa suave melodia.</p>
-                </div>
-                <div><img src="assets/notrack.jpg" alt="Música1"></div>
-              </div>
-              <div class="music-item" href="#" data-src="music1.mp3">
-                <div>
-                  <h3>Música 7</h3>
-                  <p>Relaxe e durma profundamente com essa suave melodia.</p>
-                </div>
-                <div><img src="assets/notrack.jpg" alt="Música1"></div>
-              </div>
-              <div class="music-item" href="#" data-src="music1.mp3">
-                <div>
-                  <h3>Música 8</h3>
-                  <p>Relaxe e durma profundamente com essa suave melodia.</p>
-                </div>
-                <div><img src="assets/notrack.jpg" alt="Música1"></div>
-              </div>
-              <div class="music-item" href="#" data-src="music1.mp3">
-                <div>
-                  <h3>MMúsica 9</h3>
-                  <p>Relaxe e durma profundamente com essa suave melodia.</p>
-                </div>
-                <div><img src="assets/notrack.jpg" alt="Música1"></div>
-              </div>
-              <div class="music-item" href="#" data-src="music1.mp3">
-                <div>
-                  <h3>Música 10</h3>
-                  <p>Relaxe e durma profundamente com essa suave melodia.</p>
-                </div>
-                <div><img src="assets/notrack.jpg" alt="Música1"></div>
-              </div>
+                <section class="tab-music-contents">
+                    <div class="content-music" id="musica-classica"></div>
+                    <div class="content-music" id="lo-fi"></div>
+                    <div class="content-music" id="som-ambiente"></div>
+                    <div class="content-music" id="jazz-suave"></div>
+                    <div class="content-music" id="ruidos"></div>
+                </section>
+            </section>
+            <div class="music-player">
+                <div id="now-playing"></div>
+                <audio id="audio-player" controls>
+                    <source src="" type="audio/mpeg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
             </div>
-
-
-          <div class="container-audio-player">
-            <div class="controls">
-              <button class="skip-time-back">
-                <img src="assets/music-icons/skips.png" alt="Voltar 10 segundos">
-              </button>
-              <button class="skip-back">
-                <img src="assets/music-icons/skip.png" alt="Voltar música">
-              </button>
-              <button class="play">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                  <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
-                </svg>
-              </button>
-              <button class="skip-forward">
-                <img src="assets/music-icons/skip.png" alt="Avançar música">
-              </button>
-              <button class="skip-time-forward">
-                <img src="assets/music-icons/skips.png" alt="Avançar 10 segundos">
-              </button>
-            </div>
-
-            <div class="progress-items">
-              <div class="current-time">00:00</div>
-              <div class="progress">
-                  <div class="p-bar"><div class="p-ball"></div></div>
-              </div>
-              <div class="duration">00:00</div>
-            </div>
-
-          </div>
-
-
         </div>
-          <source src="" type="audio/mp3">
-        </audio>
-      </div>
-      <script>
-      </script>
     </main>
   </div>
 </body>
 
 </html>
+
+

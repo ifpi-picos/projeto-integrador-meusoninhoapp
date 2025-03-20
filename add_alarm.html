@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alarme</title>
+    <title>Adicionar Alarme</title>
     <link rel="shortcut icon" href="assets/favicons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="manifest" href="manifest.json" />
     <script defer src="js/alarm.js"></script>
 </head>
 <body class="body-home">
@@ -20,13 +19,13 @@
       <img src="assets/logo.png" alt="Logo do Site">
       <h1>Meu Soninho</h1>
     </a>
-    <img src="assets/UserIcon.svg" alt="Foto de Perfil" class="user-icon-home">
+    <a href="login.html" class="logout" ><img src="assets/logout-icon.png" alt="Foto do perfil"></a>
   </header>
   <div class="page">
     <nav class="nav-home">
       <img class="foto-perfil-home" src="assets/UserIcon.svg" alt="Foto de Perfil">
       <a href="index.html"><img src="assets/NavIcons/HomeIcon.png" alt="Início"><span>Início</span></a>
-      <a style="background-color: var(--cor-contraste);" href="alarm.html"><img src="assets/NavIcons/AlarmIcon.png" alt="Alarme"><span>Alarme</span></a>
+      <a href="alarm.html"><img src="assets/NavIcons/AlarmIcon.png" alt="Alarme"><span>Alarme</span></a>
       <a href="music.html"><img src="assets/NavIcons/MusicIcon.png" alt="Música"><span>Músicas</span></a>
       <a href="rank.html"><img src="assets/NavIcons/RankIcon.png" alt="Ranking"><span>Ranking</span></a>
       <a href="plan.html"><img src="assets/NavIcons/PlanIcon.png" alt="Plano"><span>Plano</span></a>
@@ -35,17 +34,31 @@
     </nav>
     <main>
       <div class="container">
-        <div class="alarm-info">
-          <p>Gerencie seus alarmes!</p>
-        </div>
+        <h2>Adicionar Novo Alarme</h2>
 
-        
-        <div id="alarmList">
+        <form id="addAlarmForm">
+          <label for="alarmTime">Hora do Alarme</label>
+          <input type="time" id="alarmTime" name="alarmTime" required>
           
-        </div>
+          <label for="alarmLabel">Nome do Alarme (opcional)</label>
+          <input type="text" id="alarmLabel" name="alarmLabel" placeholder="Ex: Acordar para trabalhar">
+         
 
-        
-        <div class="add-alarm" id="addAlarmBtn">+</div>
+          <label>Repetir</label>
+          <div class="repeat-days">
+            <button type="button" class="day" id="day-dom" data-day="Dom">D</button>
+            <button type="button" class="day" id="day-seg" data-day="Seg">S</button>
+            <button type="button" class="day" id="day-ter" data-day="Ter">T</button>
+            <button type="button" class="day" id="day-qua" data-day="Qua">Q</button>
+            <button type="button" class="day" id="day-qui" data-day="Qui">Q</button>
+            <button type="button" class="day" id="day-sex" data-day="Sex">S</button>
+            <button type="button" class="day" id="day-sab" data-day="Sáb">S</button>
+          </div>
+
+          <button class="button-alarm" type="submit">Adicionar Alarme</button>
+        </form>
+
+        <button class="button-alarm" id="backBtn">Voltar</button>
       </div>
     </main>
   </div>
